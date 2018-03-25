@@ -11,7 +11,7 @@ NoOneSurvives Infra repository (first homeworks)
 
 # Homework-04
 ## bastion/someinternalhost IP addresses
-bastion_IP = 35.205.97.230 </br>
+bastion_IP = 35.205.97.230
 someinternalhost_IP = 10.132.0.4
 
 ## SSH to someinternalhost
@@ -34,7 +34,7 @@ ProxyCommand ssh -i ~/.ssh/appuser -A appuser@35.205.97.230 nc %h %p
 
 # Homework-05
 ## reddit-app IP address and port
-testapp_IP = 104.155.28.51 </br>
+testapp_IP = 104.155.28.51
 testapp_port = 9292
 
 ## SCRIPTS
