@@ -74,7 +74,11 @@ curl -I 127.0.0.1:9292
  ```
 
 
- ## Firewall rules
+## Firewall rules
 
- * Add rule to your project:</br>
- ```gcloud compute firewall-rules create default-puma-server --allow tcp:9292 --target-tags=puma-server```
+* Add rule to your project:</br>
+```gcloud compute firewall-rules create default-puma-server --allow tcp:9292 --target-tags=puma-server```
+
+# Homework-06
+
+> **MyTips:** Add "sed -e" to scripts in packer dir
