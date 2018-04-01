@@ -1,6 +1,6 @@
 {
- "ID": infra-111111,
- "sif": ubuntu16-tls,
+ "ID": "infra-111111",
+ "sif": "ubuntu16-tls",
  "type": "f1-micro",
  "zone_europe":"europe-west1-d",
  "appuser": "appuser"
