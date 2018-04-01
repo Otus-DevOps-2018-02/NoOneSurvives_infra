@@ -1,11 +1,11 @@
 {
   "builders": [
     {
-    "image_description":"reddit-packer-image",
+    "image_description":"reddit-packer-full-image",
     "type": "googlecompute",
     "project_id": "{{user `ID`}}",
-    "image_name": "reddit-base-{{timestamp}}",
-    "image_family": "reddit-base",
+    "image_name": "reddit-full-{{timestamp}}",
+    "image_family": "reddit-full",
     "source_image_family": "{{user `sif`}}",
     "zone": "{{user `zone_europe`}}",
     "ssh_username": "{{user `appuser`}}",
@@ -28,6 +28,21 @@
     {
       "type": "shell",
       "script": "scripts/install_mongodb.sh",
+      "execute_command": "sudo {{.Path}}"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/files/deploy.sh",
+      "execute_command": "sudo {{.Path}}"
+    },
+    {
+      "type": "file",
+      "source": "scripts/files/puma.service",
+      "destination": "/tmp/puma.service"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/files/enablepuma.sh",
       "execute_command": "sudo {{.Path}}"
     }
   ]
