@@ -11,7 +11,9 @@ NoOneSurvives Infra repository (first homeworks)
 - [travis-status](https://docs.travis-ci.com/user/status-images/)
 - [badges-shields](https://github.com/badges/shields)
 
-> **WindowsTips:** use '^' instead '\\' in CMD </br>
+> **WindowsTips:**
+- use '^' instead '\\' in CMD </br>
+- Windows uses CRLF for line ending, Unix like LF (Bash errors with **^M**) (See ATOMtips)
 
 > **gcutilsTips:** gsutil cp filename gs://bucket  - work with yours buckets
 
@@ -20,6 +22,7 @@ NoOneSurvives Infra repository (first homeworks)
 >  - [Markdown-plugin](https://github.com/zhuochun/md-writer)
   - [Packer-linter](https://github.com/mschuchard/linter-packer-validate)
    - dependencies : [linter](https://github.com/steelbrain/linter)
+  - [Terraform-language](https://github.com/GiantToast/language-terraform)
 
 # Homework-04
 [![Build Status](https://travis-ci.org/Otus-DevOps-2018-02/NoOneSurvives_infra.svg?branch=master)](https://travis-ci.org/Otus-DevOps-2018-02/NoOneSurvives_infra)
@@ -115,3 +118,19 @@ curl -I 127.0.0.1:9292
 2. Variables.json in .gitingore file
 3. Make immutable.json for BAKE image
 4. Add gcloud command in config-scripts
+
+
+# Homework-07
+
+---
+
+> **ATOMTips:**
+- [Line Ending Selector](https://atom.io/packages/line-ending-selector) for Bash "problem" in LF/CRLF
+
+> **SSHGUard:** Add to whitelist command:
+```bash
+sudo sshguard -w XXX.XXX.XXX.XXX
+```
+
+>**Task with (*)**
+ - ***Note***: The ssh-keys metadata value will not appear if your instance does not have existing project-wide public SSH keys. Alternatively, your project-wide public SSH keys might be under a deprecated sshKeys metadata value.
